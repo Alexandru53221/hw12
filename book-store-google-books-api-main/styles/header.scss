@@ -1,0 +1,93 @@
+@import "colors";
+
+header {
+    top: 0;
+    background-color: #fff;
+    min-width: 100%;
+    z-index: 2;
+    position: fixed;
+}
+
+.nav {
+    display: flex;
+    max-width: $contentWidth;
+    margin: 0 auto;
+    min-height: 116px;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav__logo {
+        font-weight: 700;
+        font-size: 2.4rem;
+    }
+
+    .nav__list__wrapper {
+        display: flex;
+        list-style: none;
+        max-width: 420px;
+        min-width: 410px;
+        align-items: center;
+
+        .nav__list__item {
+            margin: 0 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+
+            .nav__list__item__link {
+                text-decoration: none;
+                color: $paleText;
+            }
+
+            .nav__list__item__link--active {
+                color: $mainColor;
+                font-weight: 900;
+            }
+        }
+    }
+
+    .nav__divs {
+        display: flex;
+        max-width: 120px;
+        justify-content: space-between;
+        min-width: 100px;
+        align-items: center;
+
+        .nav__divs-list__image--active {
+            position: relative;
+
+            .nav__divs__image__span {
+                display: none;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                height: 15px;
+                width: 15px;
+                border-radius: 10px;
+                background-color: red;
+                top: 7px;
+                right: 5px;
+                color: aliceblue;
+            }
+
+            .nav__divs__image__span--active {
+                @extend .nav__divs__image__span;
+                display: flex;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .nav {
+        .nav__list__wrapper {
+            display: none;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .nav {
+        min-height: 60px;
+    }
+}

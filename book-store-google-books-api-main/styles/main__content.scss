@@ -1,0 +1,16 @@
+@import "categories";
+
+.main__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    max-width: 1120px;
+    min-width: 300px;
+}
+
+@media only screen and (max-width: 450px) {
+    .main__content {
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+}

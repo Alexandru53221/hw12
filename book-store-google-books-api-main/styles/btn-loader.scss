@@ -1,0 +1,11 @@
+.main__content__books__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+    text-align: center;
+    
+    .main__content__books__wrapper__button {
+        @extend .main__content__books__card__description__in-cart;
+    }
+}
+

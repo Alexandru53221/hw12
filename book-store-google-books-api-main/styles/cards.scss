@@ -1,0 +1,56 @@
+.main__content__books__card {
+    min-height: 300px;
+    max-width: 424px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .main__content__books__card__image {
+        & > img {
+            min-width: 100%;
+            filter: drop-shadow(5px 5px 10px rgba(128, 128, 128, 0.402));
+        }
+    }
+
+    .main__content__books__card__description {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2rem;
+        line-height: 2rem;
+        gap: .5rem;
+
+        .main__content__books__card__description__rating{
+            color: goldenrod;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .main__content__books__card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .main__content__books__card{
+        .main__content__books__card__image {
+            & > img {
+                min-width: 65%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .main__content__books__card{
+        align-items: center;
+
+        .main__content__books__card__description {
+            align-items: center;
+            padding-left: 0;
+            max-width: 250px;
+        }
+    }
+}
